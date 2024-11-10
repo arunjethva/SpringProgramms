@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="in.spring.beans.Address" id="addrId"
+		autowire-candidate="false">
+		<constructor-arg value="85"></constructor-arg>
+		<constructor-arg value="tokyo"></constructor-arg>
+		<constructor-arg value="582136"></constructor-arg>
+	</bean>
+
+	<bean class="in.spring.beans.Address" id="addrId2">
+		<constructor-arg value="45"></constructor-arg>
+		<constructor-arg value="los-angles"></constructor-arg>
+		<constructor-arg value="582463"></constructor-arg>
+	</bean>
+
+	<bean class="in.spring.beans.Student" id="stdId"
+		autowire="constructor">
+		<constructor-arg value="55" index="0"></constructor-arg>
+		<constructor-arg value="aj" index="1"></constructor-arg>
+	</bean>
+
+</beans>
